@@ -32,7 +32,7 @@ markdown.forEach(file => {
     let output = index.replace('<script type="module" src="./utils/dev.js"></script>', content);
 
     // Replace title with content of first <h1> tag
-    const newTitle = output.match(/>(.*?)<\/h1>/)[1] || null;
+    const newTitle = output.match(/>(.*?)<\/h5>/)[1] || null;
     if (newTitle) output = output.replace(/<title>(.*?)<\/title>/, `<title>${newTitle}</title>`);
 
     // Replace 'docs/assets' links with 'assets'
