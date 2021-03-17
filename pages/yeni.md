@@ -1,5 +1,6 @@
 # . (nokta) & source Komutu
 
+TEST
 Bash yerleşik(builtin) komutlarından olan nokta (`.`) aracı aslında `source` komutu ile aynı görevi üsteleniyor yani nokta yerine `source` komutunu da kullanabiliriz. Bu komutların ortak işlevi, argüman olarak verilmiş olan betik dosyasını mevcut kabuk üzerinde okuyup çalıştırmaktır. Bu sayede çalışmakta olduğumuz mevcut kabuk üzerinden betik dosyası içerisinde tanımlanmış olan değişken ve fonksiyon gibi yapılara ulaşabiliriz. Normal şartlarda betik dosyasını çalıştırdığımızda, betik dosyası yeni bir alt kabuk oluşturulup bu kabuk üzerinde çalıştırılır ve işi bittiğinde oluşturulmuş olan alt kabukla birlikte sonlandırılır.  İşte bizler de betik dosyasının ürettiği verilere mevcut kabuğumuz üzerinden de ulaşabilmek için `source` ya da nokta (`.`) komutunu kullanıyoruz. Daha iyi anlamak adına basit bir betik dosyası oluşturalım ve bu dosyanın içerisine de `linux="çekirdek"` şeklinde basit bir değişken tanımlayıp, bu değişkenin betik dosyası çalıştırıldığında komut satırına basılması için `echo $linux` şeklinde komutumuzu da ekleyelim.
 
 ```bash
