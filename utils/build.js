@@ -33,7 +33,7 @@ markdown.forEach(file => {
 
     // Replace title with content of first <h1> tag
     const newTitle = output.match(/>(.*?)<\/h1>/)[1] || null;
-    if (newTitle) output = output.replace(/<title>(.*?)<\/title>/, `<title>${newTitle}</title>`);
+    if (newTitle) output = output.replace(/<title>(.*?)<\/title>/, `<title>${newTitle}test</title>`);
 
     // Replace 'docs/assets' links with 'assets'
     output = output.replace(/docs\/assets/g, 'assets');
