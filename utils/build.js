@@ -32,8 +32,6 @@ markdown.forEach(file => {
     let output = index.replace('<script type="module" src="./utils/dev.js"></script>', content);
 
     // Replace title with content of first <h1> tag
-    const o_date_en = new Intl.DateTimeFormat('en') || null;
-    if (o_date_en) output = output.replace(/<title>(.*?)<\/title>/, `<title>${o_date_en}</title>`);
     const newTitle = output.match(/>(.*?)<\/h1>/)[1] || null;
     if (newTitle) output = output.replace(/<title>(.*?)<\/title>/, `<title>${newTitle}</title>`);
 
